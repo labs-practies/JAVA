@@ -42,13 +42,13 @@ public class Runner {
 
             System.out.println(i);
         }
-        float sumOfAge = 0;
+        float average = 0;
         for (Student i : students){
-            sumOfAge += i.getAge();
+        average += i.getAge();
         }
 
         System.out.println("Сумма: " + sum);
-        System.out.println("Среднее значение: "+ sumOfAge/students.length);
+        System.out.println("Среднее значение: "+ average/students.length);
 
 
     }
