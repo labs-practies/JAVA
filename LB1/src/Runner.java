@@ -18,12 +18,7 @@ public class Runner {
             System.out.println(i);
         }
         System.out.println("____________\n");
-        int sum = 0;
-        for (Student i : students) {
-            if (i.isDebt()) {
-                sum++;
-            }
-        }
+
         Arrays.sort(students,new Comparator<Student>(){
             public int compare(Student o1, Student o2){
                 return o1.getAge()-o2.getAge();
@@ -42,13 +37,19 @@ public class Runner {
 
             System.out.println(i);
         }
-        float average = 0;
-        for (Student i : students){
-        average += i.getAge();
-        }
 
+        int sum = 0;
+        for (Student i : students) {
+            if (i.isDebt()) {
+                sum++;
+            }
+        }
         System.out.println("Сумма: " + sum);
-        System.out.println("Среднее значение: "+ average/students.length);
+        double sumOfAge = 0;
+        for (Student i : students){
+        sumOfAge += i.getAge();
+        }
+        System.out.println("Среднее значение: "+ sumOfAge/students.length);
 
 
     }
