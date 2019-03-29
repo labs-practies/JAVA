@@ -45,11 +45,11 @@ public class Runner {
             }
         }
         System.out.println("Сумма: " + sum);
-        double sumOfAge = 0;
+        int sumOfAge = 0;
         for (Student i : students){
         sumOfAge += i.getAge();
         }
-        System.out.println("Среднее значение: "+ sumOfAge/students.length);
+        System.out.println("Среднее значение: "+ (double)sumOfAge/students.length);
 
 
     }
